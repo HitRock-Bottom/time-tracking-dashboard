@@ -1,0 +1,207 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+img{
+  max-width: 100%;
+  height : auto;
+}
+body{
+  font-family: 'Rubik', sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  color : white;
+  height : 100vh;
+  width : 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  //background-color: red;
+  display : grid;
+  width : 77%;
+  height : 75%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+}
+.profile{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 5%;
+}
+
+.section{
+  padding-top : 2.75rem;
+  border-radius: 5%;
+
+  background-repeat: no-repeat;
+  background-position: 95% -5%;
+}
+
+.card{
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 5%;
+  padding: 15%;
+  height : 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.card:hover{
+  background-color: hsl(235, 46%, 30%);
+}
+.account{
+  height : 70%;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 5%;
+  padding: 20% 10% 40% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.acc-pic img{
+  width : 35%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.select{
+  height: 30%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color : hsl(235, 45%, 61%);
+}
+
+.selected{
+  color : white;
+}
+
+.name{
+  font-size: 2.3rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.times{
+  display: flex;
+  flex-direction: column;
+  gap : 10px;
+}
+
+.curr{
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.prev{
+  color : hsl(236, 100%, 87%);
+}
+.daily, .weekly, .monthly{
+  cursor: pointer;
+}
+
+.work{
+  background-color: hsl(15, 100%, 70%);
+  background-image: url("images/icon-work.svg");
+}
+.play{
+  background-color: hsl(195, 74%, 62%);
+  background-image: url("images/icon-play.svg");
+}
+.study{
+  background-color: hsl(348, 100%, 68%);
+  background-image: url("images/icon-study.svg");
+}
+.exercise{
+  background-color: hsl(145, 58%, 55%);
+  background-image: url("images/icon-exercise.svg");
+}
+.social{
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("images/icon-social.svg");
+}
+.self-care{
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("images/icon-self-care.svg");
+}
+
+.report{
+  color : hsl(236, 100%, 87%);
+}
+
+.activity{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.activity img{
+  height : 5px;
+  width : auto;
+}
+
+.attribution{
+  position: absolute;
+  bottom : 0px;
+  width : 100%;
+  text-align: center;
+}
+@media (max-width : 650px) {
+  body{
+    display : flex;
+    flex-direction: column;
+    height : auto;
+  }
+  .container{
+    display: block;
+    margin: 40px auto;
+  }
+  .section{
+    margin-top: 30px;
+  }
+
+  .select{
+    flex-direction: row;
+  }
+  .attribution{
+    position: static;
+  }
+  .card{
+    padding : 10%;
+    gap : 10px;
+  }
+  .times{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .name{
+    font-size: 1.8rem;
+  }
+
+  .account{
+    padding: 10%;
+    display: flex;
+    flex-direction: row;
+    gap : 30px;
+  }
+  .acc-pic{
+    border : none;
+  }
+  .acc-pic img{
+    border : 4px solid white;
+    border-radius: 50%;
+  }
+
+  .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
